@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap and FontAwesome CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <!-- Native CSS -->
+    <link rel="stylesheet" type="text/css" href="ec3-home-mobile.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <title>EC^3</title>
+  </head>
+  <body>
+  	<div class="container home">
+  		<div class="title">
+  			<h1>EC^3</h1>
+  		</div>
+  		<div class="title-sub">
+  			<h2>Soluções para semáforos inteligentes</h2>
+  		</div>
+  		<div class="home-button">
+  			<button class="btn" id="btnhome">Clique aqui</button>
+  		</div>
+  	</div>
+
+  	<div class="container form1" id="form1">
+  		<form>
+  			<div class="sem">
+  				Semáforo 1
+  			</div>
+	  		<div class="quest1">
+	  			Velocidade <span>(m/s)</span>:
+	  			<input type="text" name="valor1" id="v1">
+	  		</div>
+	  		<div class="quest2">
+	  			Distância Crítica <span>(m)</span>:
+	  			<input type="text" name="valor2" id="d1">
+	  		</div>
+	  		<div class="quest3">
+	  			Inclinação <span>(%)</span>:
+	  			<input type="text" name="valor3" id="i1">
+	  		</div>
+	  		<div class="quest4">
+	  			Largura da Via <span>(m)</span>:
+	  			<input type="text" name="valor4" id="l1">
+	  		</div>
+	  		<div class="quest5">
+	  			Fluxo de Veículos:
+	  			<input type="text" name="valor5" id="F1">
+	  		</div>
+  		</form>
+
+  		<div class="row btn-footer">
+  			<button class="btn btn-prev" id="btnform1-prev">
+  				<i class="fas fa-arrow-left"></i>
+  			</button>
+  			<input type="submit" class="btn btn-next" id="btnform1-next">
+  				
+  			</input>
+  		</div>
+  	</div>
+
+  	<div class="container form1" id="form2">
+  		<form>
+  			<div class="sem">
+  				Semáforo 2
+  			</div>
+	  		<div class="quest1">
+	  			Velocidade <span>(m/s)</span>:
+	  			<input type="text" name="valor1" id="v2">
+	  		</div>
+	  		<div class="quest2">
+	  			Distância Crítica <span>(m)</span>:
+	  			<input type="text" name="valor2" id="d2">
+	  		</div>
+	  		<div class="quest3">
+	  			Inclinação <span>(%)</span>:
+	  			<input type="text" name="valor3" id="i2">
+	  		</div>
+	  		<div class="quest4">
+	  			Largura da Via <span>(m)</span>:
+	  			<input type="text" name="valor4" id="l2">
+	  		</div>
+	  		<div class="quest5">
+	  			Fluxo de Veículos:
+	  			<input type="text" name="valor5" id="F2">
+	  		</div>
+  		</form>
+
+  		<div class="row btn-footer">
+  			<button class="btn btn-prev" id="btnform2-prev">
+  				<i class="fas fa-arrow-left"></i>
+  			</button>
+  			<input type="submit" class="btn btn-next" id="btnform2-next">
+  				<i class="fas fa-arrow-right"></i>
+  			</input>
+  		</div>
+  	</div>
+
+  	<div class="container result1">
+  		<div class="ul1">
+	  		<ul>
+	  			<li>Tv1: <span id="Tv1">0</span></li><hr>
+	  			<li>Tvg1: <span id="Tvg1">0</span></li><hr>
+	  			<li>Tam1: <span id="Tam1">0</span></li><hr>
+	  			<li>Tc1: <span id="Tc1">0</span></li><hr>
+	  			<li>Tvped1: <span id="Tvped1">0</span></li>
+	  		</ul>	
+  		</div>
+  		
+  		<hr>
+
+  		<div class="ul2">
+	  		<ul class="ul2">
+	  			<li>Tv2: <span id="Tv2">0</span></li><hr>
+	  			<li>Tvg2: <span id="Tvg2">0</span></li><hr>
+	  			<li>Tam2: <span id="Tam2">0</span></li><hr>
+	  			<li>Tc2: <span id="Tc2">0</span></li><hr>
+	  			<li>Tvped2: <span id="Tvped2">0</span></li>
+	  		</ul>
+  		</div>
+
+  		<div class="row btn-footer">
+  			<button class="btn btn-prev" id="btnresult-prev">
+  				<i class="fas fa-arrow-left"></i>
+  			</button>
+  		</div>
+  	</div>
+    
+  </body>
+
+  <script>
+	$(document).ready(function(){
+		var g = 9.8;
+		var vp = 1.2;
+		var c = 5.0;
+		var tpr = 1.0;
+    	var tvgp = 1.0;
+    	var aad = 3.0;
+    	var tvp = 4.0;
+
+    	var tam1;
+    	var tam2;
+    	var tvg1;
+    	var tvg2;
+    	var tent1;
+    	var tent2;
+    	var tp1;
+    	var tp2;
+    	var y1;
+    	var y2;
+    	var FS1;
+    	var FS2;
+    	var yt1;
+    	var yt2;
+    	var tc1;
+    	var tc2;
+    	var tv1;
+    	var tv2;
+    	var tentp1;
+    	var tentp2;
+
+    	var v1;
+    	var d1;
+    	var i1;
+    	var l1;
+    	var F1;
+
+    	var v2;
+    	var d2;
+    	var i2;
+    	var l2;
+    	var F2;
+
+		$("#btnhome").click(function(){
+			$(".home").toggle("slide");
+			$("#form1").toggle("slide");
+		});
+
+		$("#btnform1-prev").click(function(){
+			$(".home").toggle("slide");
+			$("#form1").toggle("slide");
+		});
+
+		$("#btnform1-next").click(function(){
+			$("#form1").toggle("slide");
+			$("#form2").toggle("slide");
+
+			v1 = $( "#v1" ).val();
+	    	d1 = $( "#d1" ).val();
+	    	i1 = $( "#i1" ).val();
+	    	l1 = $( "#l1" ).val();
+	    	F1 = $( "#F1" ).val();
+
+	    	v1 = parseFloat(v1);
+	    	d1 = parseFloat(d1);
+	    	i1 = parseFloat(i1);
+	    	i1 = i1 / 100.0;
+	    	l1 = parseFloat(l1);
+	    	F1 = parseFloat(F1);
+
+		});
+
+		$("#btnform2-prev").click(function(){
+			$("#form1").toggle("slide");
+			$("#form2").toggle("slide");
+		});
+
+		$("#btnform2-next").click(function(){
+			$("#form2").toggle("slide");
+			$(".result1").toggle("slide");
+
+	    	v2 = $( "#v2" ).val();
+	    	d2 = $( "#d2" ).val();
+	    	i2 = $( "#i2" ).val();
+	    	l2 = $( "#l2" ).val();
+	    	F2 = $( "#F2" ).val();
+
+	    	v2 = parseFloat(v2);
+	    	d2 = parseFloat(d2);
+	    	i2 = parseFloat(i2);
+	    	i2 = i2 / 100.0;
+	    	l2 = parseFloat(l2);
+	    	F2 = parseFloat(F2);
+
+	    	FS1 = 525.0 * l1;
+	    	FS2 = 525.0 * l2;
+
+	    	tentp1 = (tpr + l1) / vp;
+	    	tentp2 = (tpr + l1) / vp;
+
+	    	tam1 = (tpr + v1) / (2.0*(aad + (i1 * g)));
+	    	tvg1 = (d1 + c) / v1;
+	    	tent1 = tam1 + tvg1;
+
+	    	tam2 = (tpr + v2) / (2.0*(aad + (i2 * g)));
+	    	tvg2 = (d2 + c) / v2;
+	    	tent2 = tam2 + tvg2;
+
+	    	tp1 = tent1 + tent2 + tvp + tentp1 + tentp2 + tvgp;
+	    	tp2 = tp1;
+
+	    	y1 = F1 / FS1;
+	    	y2 = F2 / FS2;
+	    	yt = y1 + y2;
+
+	    	tc1 = ((1.5 * tp1) + 5) / 1 - yt;
+	    	tv1 = ((tc1 - tp1) * y1) / yt;
+
+	    	tc2 = ((1.5 * tp2) + 5) / 1 - yt;
+	    	tv2 = ((tc2 - tp2) * y2) / yt;
+
+	    	tv1 = tv1.toFixed(2);
+	    	tvg1 = tvg1.toFixed(2);
+	    	tam1 = tam1.toFixed(2);
+	    	tc1 = tc1.toFixed(2);
+	    	tentp1 = tentp1.toFixed(2);
+
+	    	tv2 = tv2.toFixed(2);
+	    	tvg2 = tvg2.toFixed(2);
+	    	tam2 = tam2.toFixed(2);
+	    	tc2 = tc2.toFixed(2);
+	    	tentp2 = tentp2.toFixed(2);
+
+    		$("#Tv1").html(tv1);
+    		$("#Tvg1").html(tvg1);
+    		$("#Tam1").html(tam1);
+    		$("#Tc1").html(tc1);
+    		$("#Tvped1").html(tentp1);
+
+    		$("#Tv2").html(tv2);
+    		$("#Tvg2").html(tvg2);
+    		$("#Tam2").html(tam2);
+    		$("#Tc2").html(tc2);
+    		$("#Tvped2").html(tentp2);
+		});
+
+		$("#btnresult-prev").click(function(){
+			$("#form2").toggle("slide");
+			$(".result1").toggle("slide");
+		});
+
+	});
+  </script>
+</html>

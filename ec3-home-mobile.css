@@ -1,0 +1,210 @@
+@font-face {
+  font-family: Metropolis-Bold;
+  src: url(font/Metropolis-Bold.otf);
+}
+
+@font-face {
+  font-family: Metropolis-Regular;
+  src: url(font/Metropolis-Regular.otf);
+}
+
+@font-face {
+  font-family: Metropolis-Thin;
+  src: url(font/Metropolis-Thin.otf);
+}
+
+body, html{
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	background: #2f3640;
+}
+
+.home .title{
+	padding-top: 20px;
+	width: 100%;
+	text-align: center;
+}
+
+.home .title h1{
+	font-size: 10vh;
+	font-family: Metropolis-Bold, sans-serif;
+	color: #f5f6fa;
+}
+
+.home .title-sub{
+	width: 100%;
+	text-align: center;
+}
+
+.home .title-sub h2{
+	font-size: 3vh;
+	font-family: Metropolis-Thin, sans-serif;
+	color: #f5f6fa;
+}
+
+.home .home-button{
+	margin-top: 200px;
+	width: 100%;
+	text-align: center;
+}
+
+.home .home-button button{
+	width: 70%;
+	height: 50px;
+	color: #f5f6fa;
+    background-color: #40739e;
+    border-color: #40739e;
+    font-family: Metropolis-Regular, sans-serif;
+    font-size: 18px;
+}
+
+.home .home-button button:focus{
+	border-color: inherit;
+	-webkit-box-shadow: none;
+	box-shadow: none;	
+	color: #40739e;
+    background-color: #f5f6fa;
+    border-color: #f5f6fa;
+}
+
+.form1 {
+	display: none;
+	padding-top: 20px;
+}
+
+.form1 form {
+	font-family: Metropolis-Regular, sans-serif;
+	font-size: 16px;
+	color: #f5f6fa;
+}
+
+.form1 form span {
+	color: #fbc531;
+}
+
+.form1 form .sem {
+	font-family: Metropolis-Regular, sans-serif;
+	font-size: 24px;
+	color: #f5f6fa;
+	text-align: center;
+}
+
+.form1 form input {
+	font-family: Metropolis-Regular, sans-serif;
+    width: 100%;
+    height: 51px;
+    position: relative;
+    background-color: #f7f7f7;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.form1 form input:focus {
+	outline: 0;
+	border-color: #fbc531;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	border-radius: 10px;
+	border-width: 2px;
+}
+
+.btn-footer{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 60px;
+	width: 100%;
+	margin: 0;
+}
+
+.btn-footer button{
+	width: 50px;
+	height: 50px;
+	color: #f5f6fa;
+    background-color: #40739e;
+    border-color: #40739e;
+    font-family: Metropolis-Regular, sans-serif;
+    font-size: 28px;
+}
+
+.btn-footer button:focus{
+	border-color: inherit;
+	-webkit-box-shadow: none;
+	box-shadow: none;	
+	color: #40739e;
+    background-color: #f5f6fa;
+    border-color: #f5f6fa;
+}
+
+.btn-footer button.btn-prev{
+	position: absolute;
+	left: 10px;
+}
+
+.btn-footer input{
+	width: 100px;
+	height: 50px;
+	color: #f5f6fa;
+    background-color: #40739e;
+    border-color: #40739e;
+    font-family: Metropolis-Bold, sans-serif;
+    font-size: 18px;
+}
+
+.btn-footer input:focus{
+	border-color: inherit;
+	-webkit-box-shadow: none;
+	box-shadow: none;	
+	color: #40739e;
+    background-color: #f5f6fa;
+    border-color: #f5f6fa;
+}
+
+.btn-footer input.btn-next{
+	position: absolute;
+	right: 10px;
+}
+
+.result1{
+	display: none;
+	padding-top: 20px;
+}
+
+.result1 hr{
+	border-top: 2px solid #fbc531;
+	margin: 0;
+}
+
+.result1 ul{
+	width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    right: 0;
+    border-bottom: 2px #f5f6fa;
+    text-align: center;
+    padding-left: 20px;
+	padding-right: 20px;
+}
+
+.result1 ul li{
+	color: #f5f6fa;
+	font-family: Metropolis-Regular, sans-serif;
+    font-size: 20px;
+}
+
+.result1 ul li span{
+	color: #fbc531;
+	font-family: Metropolis-Bold, sans-serif;
+    font-size: 26px;
+}
+
+.result1 ul hr{
+	border-top: 2px solid #f5f6fa;
+	margin: 0;
+	margin-bottom: 10px;
+}
