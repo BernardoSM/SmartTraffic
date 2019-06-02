@@ -3,7 +3,7 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap and FontAwesome CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -141,6 +141,22 @@
 
   <script>
 	$(document).ready(function(){
+
+		var orientationChange = function () {
+			var $element = $('body');
+			$element.css('height', '100%'); // Change this to your own original vh value.
+			$element.css('height', $element.height() + 'px');
+		};
+
+		var s = screen;
+		var o = s.orientation || s.msOrientation || s.mozOrientation;
+		o.addEventListener('change', function () {
+			setTimeout(function () {
+			orientationChange();
+			}, 250);
+			}, false);
+		orientationChange();
+
 		var g = 9.8;
 		var vp = 1.2;
 		var c = 5.0;
