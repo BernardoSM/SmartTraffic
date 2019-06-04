@@ -98,6 +98,10 @@ body, html{
 	text-align: center;
 }
 
+.form1 form .quest5 i {
+	color: #44bd32;
+}
+
 .form1 form input {
 	font-family: Metropolis-Regular, sans-serif;
     width: 100%;
@@ -179,6 +183,14 @@ body, html{
 .result1{
 	display: none;
 	padding-top: 20px;
+}
+
+.result1 .sem {
+	font-family: Metropolis-Thin, sans-serif;
+	font-size: 24px;
+	color: #f5f6fa;
+	text-align: center;
+	margin-bottom: 10px;
 }
 
 .result1 hr{
