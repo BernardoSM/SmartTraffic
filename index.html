@@ -116,6 +116,7 @@
 	  		<ul>
 	  			<li>Verde 1: <span id="Tv1">0</span></li><hr>
 	  			<li>Amarelo 1: <span id="Tam1">0</span></li><hr>
+	  			<li>Vermelho 1: <span id="Tver1">0</span></li><hr>
 	  			<li>Vermelho Geral 1: <span id="Tvg1">0</span></li>
 	  		</ul>	
   		</div>
@@ -126,6 +127,7 @@
 	  		<ul class="ul2">
 	  			<li>Verde 2: <span id="Tv2">0</span></li><hr>
 	  			<li>Amarelo 2: <span id="Tam2">0</span></li><hr>
+	  			<li>Vermelho 2: <span id="Tver2">0</span></li><hr>
 	  			<li>Vermelho Geral 2: <span id="Tvg2">0</span></li>
 	  		</ul>
   		</div>
@@ -176,6 +178,8 @@
 
     	var tam1;
     	var tam2;
+    	var tver1;
+    	var tver2;
     	var tvg1;
     	var tvg2;
     	var tent1;
@@ -264,7 +268,7 @@
 	    	FS2 = 525.0 * l2;
 
 	    	tentp1 = (tpr + l1) / vp;
-	    	tentp2 = (tpr + l1) / vp;
+	    	tentp2 = (tpr + l2) / vp;
 
 	    	tam1 = (tpr + v1) / (2.0*(aad + (i1 * g)));
 	    	tvg1 = (d1 + c) / v1;
@@ -281,20 +285,28 @@
 	    	y2 = F2 / FS2;
 	    	yt = y1 + y2;
 
-	    	tc1 = ((1.5 * tp1) + 5) / 1 - yt;
+	    	tc1 = ((1.5 * tp1) + 5) / (1 - yt);
 	    	tv1 = ((tc1 - tp1) * y1) / yt;
 
-	    	tc2 = ((1.5 * tp2) + 5) / 1 - yt;
+	    	tc2 = ((1.5 * tp2) + 5) / (1 - yt);
 	    	tv2 = ((tc2 - tp2) * y2) / yt;
+
+	    	tver1 = tc1 - tentp1 - tv1 - tam1 - tvg1;
+	    	tver2 = tc2 - tentp2 - tv2 - tam2 - tvg2;
+
+	    	tentp1 = tentp1 + 7.0;
+	    	tentp2 = tentp2 + 7.0;
 
 	    	tv1 = tv1.toFixed(2);
 	    	tvg1 = tvg1.toFixed(2);
+	    	tver1 = tver1.toFixed(2);
 	    	tam1 = tam1.toFixed(2);
 	    	tc1 = tc1.toFixed(2);
 	    	tentp1 = tentp1.toFixed(2);
 
 	    	tv2 = tv2.toFixed(2);
 	    	tvg2 = tvg2.toFixed(2);
+	    	tver2 = tver2.toFixed(2);
 	    	tam2 = tam2.toFixed(2);
 	    	tc2 = tc2.toFixed(2);
 	    	tentp2 = tentp2.toFixed(2);
@@ -304,12 +316,18 @@
     		$("#Tam1").html(tam1);
     		$("#Tc1").html(tc1);
     		$("#Tvped1").html(tentp1);
+    		$("#Tver1").html(tver1);
 
     		$("#Tv2").html(tv2);
     		$("#Tvg2").html(tvg2);
     		$("#Tam2").html(tam2);
     		$("#Tc2").html(tc2);
-    		$("#Tvped2").html(tentp2);
+    		if(tentp1 > tentp2){
+    			$("#Tvped2").html(tentp1);
+    		}else{
+    			$("#Tvped2").html(tentp2);
+    		}
+    		$("#Tver2").html(tver2);
 		});
 
 		$("#btnresult-prev").click(function(){
